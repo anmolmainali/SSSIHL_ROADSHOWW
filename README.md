@@ -72,7 +72,9 @@ This was a simple code which adds the number from 1 to n where 'n' is the number
     `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o {filename}.o {filename}.c`
 * Then we disassemble the file for the RISC-V architecture using the following command :
   
-    ` riscv64-unknown-elf-objdump -d {filename}.o `
+    ```
+  iscv64-unknown-elf-objdump -d {filename}.o
+    ```
   After we ran the code we get the output as:
 
   
@@ -88,5 +90,58 @@ This was a simple code which adds the number from 1 to n where 'n' is the number
 
 
 
+![Screenshot 2024-12-13 121217](https://github.com/user-attachments/assets/86383699-9c15-4372-8c92-d1909a9598de)
 
+* Then we specify the version to 0.9 by the following command
+    ```
+    package require openlane 0.9
+    ```
+* Then we prepare the design workspace for a specific project which in our case is picorv32a using the following command
+     ```
+     prep -design picorv32a
+     ```
+
+We then get
+
+![Screenshot 2024-12-13 121815](https://github.com/user-attachments/assets/f05f1394-3ff7-472d-a84b-b3ca9c0aeca5)
+
+* Then we trigger the synthesis stage of the digital IC design flow by using the following command
+  ```
+   run_synthesis
+  ```
+
+  Then we get
+
+ 
+  
+![image (2)](https://github.com/user-attachments/assets/b9282a2c-2ac0-4f67-bf1f-681c45baee95)
+
+
+* Then we execute the floorplanning state of the IC design flow .It is a crucial step in translating the synthesized gate-level netlist into a physical design by defining the chip's layout structure and preparing it for placement and routing.This was done by executing the following command
+
+  ```
+      run_floorplan
+  ```
+
+  
+![Screenshot 2024-12-13 123744](https://github.com/user-attachments/assets/1ee2bf44-60c3-4b9b-bc8c-ccde32e63684)
+
+
+* Then we open a new terminal and type the following command to display the floorplan image(some changes in command is required) :
+
+  ```
+   eog designs/picorv32a/runs/{press tab as it varies from device to device}/results/floorplan/picorv32a.floorplan.def.png
+  ```
+
+  Then a png file is opened
+  
+
+
+![Screenshot 2024-12-13 124030](https://github.com/user-attachments/assets/3647bf81-ce39-4dca-8ad9-01cec93a49a4)
+
+
+* For the placement stage of the digital ASIC design flow we use the following command
+  ```
+  run_placement
+  ```
 
