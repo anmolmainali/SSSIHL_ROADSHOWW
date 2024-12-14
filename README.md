@@ -145,3 +145,43 @@ We then get
   run_placement
   ```
 
+![Screenshot 2024-12-14 131827](https://github.com/user-attachments/assets/9eb469b6-051e-4120-89b4-fe8aaa4f9b5a)
+
+* Then we open a new terminal and type the following command to display the placement image(some changes in command is required)
+  
+```
+eog designs/picorv32a/runs/{press tab as it varies from device to device}/results/placement/picorv32a.placement.def.png
+```
+
+![Screenshot 2024-12-13 140936](https://github.com/user-attachments/assets/832ca6d5-0f79-4a77-833c-555b77785c14)
+
+
+
+# Zoomed in image #
+
+
+![Screenshot 2024-12-13 141058](https://github.com/user-attachments/assets/aebd8bc5-816f-40e3-b9f9-e3189461a062)
+
+
+* Then we run the command n the OpenLane flow stands for Clock Tree Synthesis (CTS), and its purpose is to create a clock distribution network for your design.
+    ```
+      run_cts
+    ```
+
+
+    ![Screenshot 2024-12-13 141933](https://github.com/user-attachments/assets/b71adc0e-cf6d-4436-83ab-c18b580add44)
+
+
+* Once CTS is complete, the next step is routing. This is where the tool connects all the cells using metal layers, creating the physical interconnections that make up the logic and clock paths of the design.We do this by running the following code:
+ ```
+run_route
+```
+
+                  
+![Screenshot 2024-12-13 143036](https://github.com/user-attachments/assets/72883670-6852-4e64-b703-dd68262e6c4f)
+
+### This was the final step in designing a chip which in now ready for production ###
+
+# Workiing a code on the VSD squadron #
+
+
