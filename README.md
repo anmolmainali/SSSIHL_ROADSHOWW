@@ -2,22 +2,22 @@
 This repository documents my experience in RISC-V and VLSI Chip Design Roadshow   &amp; Upskilling Workshop at SSSIHL
 
 # Workshop Overview
-In this one day workshop me and my fellow Physics enthusiast we were introduced to VLSI and RISC-V and got to understand the process of making a chip. This workshop also helped us understand about various kinds of chips and microprocessors, this workshop was very useful as it helped us to delve more into the field of VLSI and chip designing with more career options in the future.
+In this one-day workshop, my fellow Physics enthusiast and I were introduced to VLSI and RISC-V and got to understand the process of making a chip. This workshop also helped us understand various kinds of chips and microprocessors. This workshop was very useful as it helped us delve more into the field of VLSI and chip designing, giving us more career options in the future.
 
 # Process 
-We first installed all the softwares as shown below
+We first installed all the software as shown below
 
 ![Screenshot 2024-12-14 094402](https://github.com/user-attachments/assets/bf5f1750-9096-48b0-a24a-40817bcfc72d)
 
-* Slack is platform where we recieved our codes and where we could share our personal progress with other designers in the channel and also interact with them.
+* Slack is a platform on which we received our codes. On it, we could share our personal progress with other designers and interact with them.
 
-* Oracle virtual box helped us use and external OS where we worked our code for designing.(The OS used was  Ubuntu 18.04 LTS(Bionic Beaver)
+* Oracle virtual box helped us use an external OS where we designed our code(The OS used was  Ubuntu 18.04 LTS(Bionic Beaver)
 
 * vsd squadron was exported to the virtual box where we used to open the OS.
 
-# The follow up steps
+# The follow-up steps
 
-Now after setting up our necessary tools required we processed to open the Virtual Box and we were encountered with a preface of this kind
+Now after setting up our necessary tools, we processed to open the Virtual Box and we were encountered with a preface of this kind.
 
 ![Screenshot 2024-12-13 100427](https://github.com/user-attachments/assets/bf79f6ec-f9d8-42f1-93e0-e1d75e039661)
 
@@ -67,7 +67,7 @@ This was a simple code which adds the number from 1 to n where 'n' is the number
 
     ![Screenshot 2024-12-13 103044](https://github.com/user-attachments/assets/0ef6bb24-0c17-40a3-b68f-5c72ada8965b)
 
-## Then as we are using RISC-V architechture we will use the following command to do so :##
+## Then as we are using RISC-V architecture we will use the following command to do so :##
   
     `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o {filename}.o {filename}.c`
 * Then we disassemble the file for the RISC-V architecture using the following command :
@@ -117,7 +117,7 @@ We then get
 ![image (2)](https://github.com/user-attachments/assets/b9282a2c-2ac0-4f67-bf1f-681c45baee95)
 
 
-* Then we execute the floorplanning state of the IC design flow .It is a crucial step in translating the synthesized gate-level netlist into a physical design by defining the chip's layout structure and preparing it for placement and routing.This was done by executing the following command
+* Then we execute the floorplanning state of the IC design flow .It is a crucial step in translating the synthesized gate-level netlist into a physical design by defining the chip's layout structure and preparing it for placement and routing. This was done by executing the following command
 
   ```
       run_floorplan
@@ -180,13 +180,13 @@ run_route
                   
 ![Screenshot 2024-12-13 143036](https://github.com/user-attachments/assets/72883670-6852-4e64-b703-dd68262e6c4f)
 
-### This was the final step in designing a chip which in now ready for production ###
+### This was the final step in designing a chip which is now ready for production ###
 
-# Workiing a code on the VSD squadron #
+# Working a code on the VSD squadron #
 
 After all the designing part we finally got the boards, now it was time to run a code on this board.
 
-* We opened VS code where we used the Platform IO extension to run the code which was given to us on slack.
+* We opened VS code where we used the Platform IO extension to run the code which was given to us on Slack.
 * We then connected the board to to our laptop
 * Then a little but of changes were made to the code
 * We changed 1NVIC_PriorityGroup_2` to `NVIC_PriorityGroup_1`
@@ -324,3 +324,5 @@ https://github.com/user-attachments/assets/0180ab39-7298-4396-ab3c-ab6c3eda7b57
 
 
 
+# This was about the workshop that we as a department attended. It was really helpful for us and we got a lot of insights about VSLI and chip designing.
+# I  would like to thank Mr. Kunal Gosh and his team for teaching and providing us with the equipment required for this workshop. I would also like to thank our Institute and our department for providing us with this opportunity
