@@ -31,6 +31,24 @@ Now after setting up our necessary tools required we processed to open the Virtu
   * The password provided by the host was used to install gedit
  
     
-![Uploading image.png…]()
+
+![image](https://github.com/user-attachments/assets/71b143fe-f6fa-4af0-9dfa-ccf4a05caf32)
+
+* The new white interface was used to write our code and save it.
+
+  ### Code ###
+
+  `#include<stdio.h>
+int main(){
+    int sum = 0, i, n;
+    printf("Enter the value of n = ");
+    scanf("%d",&n);
+    for(i = 1;i <= n;i++){
+       sum = sum + i;
+    }
+    printf("The Sum of numbers from 1 to %d is %d\n",n,sum);
+    return 0;
+}
+`
 
 
