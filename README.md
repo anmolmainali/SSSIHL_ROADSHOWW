@@ -324,5 +324,5 @@ https://github.com/user-attachments/assets/0180ab39-7298-4396-ab3c-ab6c3eda7b57
 
 
 
-# This was about the workshop that we as a department attended. It was really helpful for us and we got a lot of insights about VSLI and chip designing.
-# I  would like to thank Mr. Kunal Gosh and his team for teaching and providing us with the equipment required for this workshop. I would also like to thank our Institute and our department for providing us with this opportunity
+### This was about the workshop that we as a department attended. It was really helpful for us and we got a lot of insights about VSLI and chip designing. ###
+### I  would like to thank Mr. Kunal Gosh and his team for teaching and providing us with the equipment required for this workshop. I would also like to thank our Institute and our department for providing us with this opportunity ###
