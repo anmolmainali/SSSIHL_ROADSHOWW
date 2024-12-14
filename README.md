@@ -184,4 +184,76 @@ run_route
 
 # Workiing a code on the VSD squadron #
 
+After all the designing part we finally got the boards, now it was time to run a code on this board.
+
+* We opened VS code where we used the Platform IO extension to run the code which was given to us on slack.
+* We then connected the board to to our laptop
+* Then a little but of changes were made to the code
+* We changed 1NVIC_PriorityGroup_2` to `NVIC_PriorityGroup_1`
+
+  
+![Screenshot 2024-12-14 133311](https://github.com/user-attachments/assets/8fe7f659-aa81-4350-bc70-71c448a19f47)
+
+
+  
+* Then the `Delay_Ms()` was changed from 1000 to 100 so that the LED blinks faster
+
+
+![Screenshot 2024-12-14 133435](https://github.com/user-attachments/assets/b42f1fee-d2ea-4a27-8e23-63cf9c3af7ed)
+
+# This was what was noticed on the board
+
+
+
+https://github.com/user-attachments/assets/dea11e52-6198-4c74-8ecf-fcc5cf3f497d
+
+# The code we used 
+
+```
+#include <ch32v00x.h>
+#include <debug.h>
+
+#define BLINKY_GPIO_PORT GPIOD
+#define BLINKY_GPIO_PIN GPIO_Pin_6
+#define BLINKY_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE)
+
+void NMI_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void Delay_Init(void);
+void Delay_Ms(uint32_t n);
+
+int main(void)
+{
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+	SystemCoreClockUpdate();
+	Delay_Init();
+
+	GPIO_InitTypeDef GPIO_InitStructure = {0};
+
+	BLINKY_CLOCK_ENABLE;
+	GPIO_InitStructure.GPIO_Pin = BLINKY_GPIO_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(BLINKY_GPIO_PORT, &GPIO_InitStructure);
+
+	uint8_t ledState = 0;
+	while (1)
+	{
+		GPIO_WriteBit(BLINKY_GPIO_PORT, BLINKY_GPIO_PIN, ledState);
+		ledState ^= 1; // invert for the next run
+		Delay_Ms(100);
+	}
+}
+
+void NMI_Handler(void) {}
+void HardFault_Handler(void)
+{
+	while (1)
+	{
+	}
+}
+```
+
+
+
 
