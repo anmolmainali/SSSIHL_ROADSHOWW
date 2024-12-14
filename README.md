@@ -9,11 +9,11 @@ We first installed all the softwares as shown below
 
 ![Screenshot 2024-12-14 094402](https://github.com/user-attachments/assets/bf5f1750-9096-48b0-a24a-40817bcfc72d)
 
-i)Slack is platform where we recieved our codes and where we could share our personal progress with other designers in the channel and also interact with them.
+* Slack is platform where we recieved our codes and where we could share our personal progress with other designers in the channel and also interact with them.
 
-ii) Oracle virtual box helped us use and external OS where we worked our code for designing.(The OS used was  Ubuntu 18.04 LTS(Bionic Beaver)
+* Oracle virtual box helped us use and external OS where we worked our code for designing.(The OS used was  Ubuntu 18.04 LTS(Bionic Beaver)
 
-iii) vsd squadron was exported to the virtual box where we used to open the OS.
+* vsd squadron was exported to the virtual box where we used to open the OS.
 
 # The follow up steps
 
@@ -22,6 +22,15 @@ Now after setting up our necessary tools required we processed to open the Virtu
 ![Screenshot 2024-12-13 100427](https://github.com/user-attachments/assets/bf79f6ec-f9d8-42f1-93e0-e1d75e039661)
 
 
-i)After opening Virtual Box we opened a new terminal where we used it to write our code and execute it.
+* After opening Virtual Box we opened a new terminal where we wrote our new commands to install gedit
 
-# Code
+* We use the command ### Example Commands to clone a Git repository and install gedit:
+
+  ` sudo apt install gedit`
+
+  * The password provided by the host was used to install gedit
+ 
+    
+![Uploading image.png…]()
+
+
