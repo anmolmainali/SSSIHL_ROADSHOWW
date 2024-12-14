@@ -37,8 +37,8 @@ Now after setting up our necessary tools required we processed to open the Virtu
 * The new white interface was used to write our code and save it.
 
   ### Code ###
-
-  `#include<stdio.h>
+```
+  #include<stdio.h>
 int main(){
     int sum = 0, i, n;
     printf("Enter the value of n = ");
@@ -49,6 +49,44 @@ int main(){
     printf("The Sum of numbers from 1 to %d is %d\n",n,sum);
     return 0;
 }
-`
+```
+
+![Screenshot 2024-12-13 102355](https://github.com/user-attachments/assets/0e820091-265e-4e54-8be5-2390e52462ba)
+
+This was a simple code which adds the number from 1 to n where 'n' is the number provided by us.
+
+* After saving the file we opened the previous terminal where we executed the code
+
+* we used two commands here
+
+  ` gcc {file name}.c`
+  
+  `./a.out`
+
+  * After running the code we provided the number and it gave the sum of 1 to n.
+
+    ![Screenshot 2024-12-13 103044](https://github.com/user-attachments/assets/0ef6bb24-0c17-40a3-b68f-5c72ada8965b)
+
+## Then as we are using RISC-V architechture we will use the following command to do so :##
+  
+    `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o {filename}.o {filename}.c`
+* Then we disassemble the file for the RISC-V architecture using the following command :
+  
+    ` riscv64-unknown-elf-objdump -d {filename}.o `
+  After we ran the code we get the output as:
+
+  
+  ![Screenshot 2024-12-13 105239](https://github.com/user-attachments/assets/80df8510-006d-4a23-9940-ad9679d0d4e1)
+
+
+  ## We then changed the directory of the openlane ##
+
+  ```
+  cd Desktop/work/tools/openlane_working_dir/openlane
+  ```
+
+
+
+
 
 
