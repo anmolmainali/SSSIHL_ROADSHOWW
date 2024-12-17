@@ -8,10 +8,10 @@ In this one-day workshop, my fellow Physics enthusiast and I were introduced to 
 We first installed all the software as shown below
 
 ![Screenshot 2024-12-14 094402](https://github.com/user-attachments/assets/bf5f1750-9096-48b0-a24a-40817bcfc72d)
-
+# ABOUT THE SOFTWARE
 * Slack is a platform on which we received our codes. On it, we could share our personal progress with other designers and interact with them.
 
-* Oracle virtual box helped us use an external OS where we designed our code(The OS used was  Ubuntu 18.04 LTS(Bionic Beaver)
+* Oracle virtual box helped us use an external OS where we designed our code(The OS used was  Ubuntu 18.04 LTS(Bionic Beaver).
 
 * vsd squadron was exported to the virtual box where we used to open the OS.
 
@@ -19,22 +19,25 @@ We first installed all the software as shown below
 
 Now after setting up our necessary tools, we processed to open the Virtual Box and we were encountered with a preface of this kind.
 
-![Screenshot 2024-12-13 100427](https://github.com/user-attachments/assets/bf79f6ec-f9d8-42f1-93e0-e1d75e039661)
+
+![image](https://github.com/user-attachments/assets/56956e88-a59f-499d-b691-d3532b334678)
 
 
-* After opening Virtual Box we opened a new terminal where we wrote our new commands to install gedit
+
+
+* After opening Virtual Box we opened a new terminal where we wrote our new commands to install gedit.
 
 * We use the command ### Example Commands to clone a Git repository and install gedit:
 
   ` sudo apt install gedit`
 
-  * The password provided by the host was used to install gedit
+  * The password provided by the host was used to install gedit.
  
-    
+    ![image](https://github.com/user-attachments/assets/3f5d0740-4f8c-4e76-807c-9b0ef220f67c)
 
-![image](https://github.com/user-attachments/assets/71b143fe-f6fa-4af0-9dfa-ccf4a05caf32)
 
-* The new white interface was used to write our code and save it.
+
+* The new white interface was used to write our code and to save it.
 
   ### Code ###
 ```
@@ -50,74 +53,79 @@ int main(){
     return 0;
 }
 ```
+![image](https://github.com/user-attachments/assets/72a62bdb-9bfc-44b1-bd3c-b4c0777f1c71)
 
-![Screenshot 2024-12-13 102355](https://github.com/user-attachments/assets/0e820091-265e-4e54-8be5-2390e52462ba)
 
 This was a simple code which adds the number from 1 to n where 'n' is the number provided by us.
 
-* After saving the file we opened the previous terminal where we executed the code
+* After saving the file we opened the previous terminal where we executed the code.
 
 * we used two commands here
 
-  ` gcc {file name}.c`
+ 1.  ` gcc {file name}.c`
   
-  `./a.out`
+  2. `./a.out`
 
   * After running the code we provided the number and it gave the sum of 1 to n.
 
-    ![Screenshot 2024-12-13 103044](https://github.com/user-attachments/assets/0ef6bb24-0c17-40a3-b68f-5c72ada8965b)
+   ![image (3)](https://github.com/user-attachments/assets/55dd227b-3d1e-4604-8968-a1c7f97fcddd)
 
-## Then as we are using RISC-V architecture we will use the following command to do so :##
+
+## Then as we were using RISC-V architecture we also used the following command to do so :##
   
     `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o {filename}.o {filename}.c`
-* Then we disassemble the file for the RISC-V architecture using the following command :
+* Then we disassembled the file for the RISC-V architecture using the following command :
   
     ```
   iscv64-unknown-elf-objdump -d {filename}.o
     ```
-  After we ran the code we get the output as:
+  After we ran the code we got the output as:
 
-  
-  ![Screenshot 2024-12-13 105239](https://github.com/user-attachments/assets/80df8510-006d-4a23-9940-ad9679d0d4e1)
+  ![image (4)](https://github.com/user-attachments/assets/8751e4d1-1567-448f-90d6-1d6e39e8ac14)
 
 
-  ## We then changed the directory of the openlane ##
+
+
+  ## We then changed the directory of the openlane. ##
 
   ```
   cd Desktop/work/tools/openlane_working_dir/openlane
   ```
 
 
+![image (5)](https://github.com/user-attachments/assets/7d0e8c5e-fae8-4cbf-bdc8-70ed8affdb7a)
 
 
-![Screenshot 2024-12-13 121217](https://github.com/user-attachments/assets/86383699-9c15-4372-8c92-d1909a9598de)
+
 
 * Then we specify the version to 0.9 by the following command
     ```
     package require openlane 0.9
     ```
-* Then we prepare the design workspace for a specific project which in our case is picorv32a using the following command
+* Then we prepare the design workspace for a specific project which in our case is picorv32a using the following command.
      ```
      prep -design picorv32a
      ```
 
-We then get
+We then got
 
-![Screenshot 2024-12-13 121815](https://github.com/user-attachments/assets/f05f1394-3ff7-472d-a84b-b3ca9c0aeca5)
+![image (8)](https://github.com/user-attachments/assets/f7e7735a-7749-4876-ad40-5240702abce7)
 
-* Then we trigger the synthesis stage of the digital IC design flow by using the following command
+
+
+* Then we triggered the synthesis stage of the digital IC design flow by using the following command:-
   ```
    run_synthesis
   ```
 
-  Then we get
+  Then we got:
 
  
   
 ![image (2)](https://github.com/user-attachments/assets/b9282a2c-2ac0-4f67-bf1f-681c45baee95)
 
 
-* Then we execute the floorplanning state of the IC design flow .It is a crucial step in translating the synthesized gate-level netlist into a physical design by defining the chip's layout structure and preparing it for placement and routing. This was done by executing the following command
+* Then we executed the floorplanning state of the IC design flow .It was a crucial step in translating the synthesized gate-level netlist into a physical design by defining the chip's layout structure and preparing it for placement and routing. This was done by executing the following command.
 
   ```
       run_floorplan
@@ -127,43 +135,39 @@ We then get
 ![Screenshot 2024-12-13 123744](https://github.com/user-attachments/assets/1ee2bf44-60c3-4b9b-bc8c-ccde32e63684)
 
 
-* Then we open a new terminal and type the following command to display the floorplan image(some changes in command is required) :
+* Then we opened a new terminal and typed the following command to display the floorplan image(some changes in command is required) :
 
   ```
    eog designs/picorv32a/runs/{press tab as it varies from device to device}/results/floorplan/picorv32a.floorplan.def.png
   ```
 
-  Then a png file is opened
+  Then a png file was opened
   
 
+![image (9)](https://github.com/user-attachments/assets/fd53c7ef-8bae-4e73-9430-411223e8f742)
 
-![Screenshot 2024-12-13 124030](https://github.com/user-attachments/assets/3647bf81-ce39-4dca-8ad9-01cec93a49a4)
 
 
-* For the placement stage of the digital ASIC design flow we use the following command
+* For the placement stage of the digital ASIC design flow we used the following command
   ```
   run_placement
   ```
+![image (11)](https://github.com/user-attachments/assets/9a072606-847f-4dad-be1a-def8bc480c06)
 
-![Screenshot 2024-12-14 131827](https://github.com/user-attachments/assets/9eb469b6-051e-4120-89b4-fe8aaa4f9b5a)
 
-* Then we open a new terminal and type the following command to display the placement image(some changes in command is required)
+* Then we open a new terminal and typed the following command to display the placement image(some changes in command is required)
   
 ```
 eog designs/picorv32a/runs/{press tab as it varies from device to device}/results/placement/picorv32a.placement.def.png
 ```
 
-![Screenshot 2024-12-13 140936](https://github.com/user-attachments/assets/832ca6d5-0f79-4a77-833c-555b77785c14)
+![image (10)](https://github.com/user-attachments/assets/01805d32-ee30-4755-9d48-31ad9183b9d0)
 
 
 
-# Zoomed in image #
 
 
-![Screenshot 2024-12-13 141058](https://github.com/user-attachments/assets/aebd8bc5-816f-40e3-b9f9-e3189461a062)
-
-
-* Then we run the command n the OpenLane flow stands for Clock Tree Synthesis (CTS), and its purpose is to create a clock distribution network for your design.
+* Then we ran the command n the OpenLane flow stands for Clock Tree Synthesis (CTS), and its purpose was to create a clock distribution network for our design.
     ```
       run_cts
     ```
@@ -172,7 +176,7 @@ eog designs/picorv32a/runs/{press tab as it varies from device to device}/result
     ![Screenshot 2024-12-13 141933](https://github.com/user-attachments/assets/b71adc0e-cf6d-4436-83ab-c18b580add44)
 
 
-* Once CTS is complete, the next step is routing. This is where the tool connects all the cells using metal layers, creating the physical interconnections that make up the logic and clock paths of the design.We do this by running the following code:
+* Once CTS was completed, the next step was routing. This was where the tool connected all the cells using metal layers, creating the physical interconnections that make up the logic and clock paths of the design.We did this by running the following code:
  ```
 run_route
 ```
@@ -180,7 +184,7 @@ run_route
                   
 ![Screenshot 2024-12-13 143036](https://github.com/user-attachments/assets/72883670-6852-4e64-b703-dd68262e6c4f)
 
-### This was the final step in designing a chip which is now ready for production ###
+### This was the final step in designing a chip which was now ready for production ###
 
 # Working a code on the VSD squadron #
 
@@ -188,7 +192,7 @@ After all the designing part we finally got the boards, now it was time to run a
 
 * We opened VS code where we used the Platform IO extension to run the code which was given to us on Slack.
 * We then connected the board to to our laptop
-* Then a little but of changes were made to the code
+* Then a little bit of changes were made to the code
 * We changed 1NVIC_PriorityGroup_2` to `NVIC_PriorityGroup_1`
 
   
@@ -205,7 +209,11 @@ After all the designing part we finally got the boards, now it was time to run a
 
 
 
-https://github.com/user-attachments/assets/dea11e52-6198-4c74-8ecf-fcc5cf3f497d
+
+https://github.com/user-attachments/assets/bf2ec9dd-2f0b-48b4-bc0c-b83540750823
+
+
+
 
 # The code we used 
 
@@ -319,10 +327,14 @@ int main(void)
 
 
 
-https://github.com/user-attachments/assets/0180ab39-7298-4396-ab3c-ab6c3eda7b57
+
+https://github.com/user-attachments/assets/d85d5e89-225f-4729-8e53-e3cd237a3eea
+
+
+
 
 
 
 
 ### This was about the workshop that we as a department attended. It was really helpful for us and we got a lot of insights about VSLI and chip designing. ###
-### I  would like to thank Mr. Kunal Gosh and his team for teaching and providing us with the equipment required for this workshop. I would also like to thank our Institute and our department for providing us with this opportunity ###
+### I  would like to thank Mr. Kunal Gosh and his team for teaching and providing us with the equipment required for this workshop. I would also like to thank our Institute and our department for providing us with this opportunity. ###
